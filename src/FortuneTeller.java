@@ -9,10 +9,8 @@ public class FortuneTeller {
 		System.out.println("Hello. Welcome to Micheal's fortune teller!");
 		System.out.println("Enter your first name.");
 		String firstName = input.nextLine();
-		firstName = firstName.toLowerCase();
 		System.out.println("Enter your last name.");
 		String lastName = input.nextLine();
-		lastName = lastName.toLowerCase();
 		System.out.println("Enter your age.");
 		int age = input.nextInt();
 		input.nextLine();
@@ -33,36 +31,38 @@ public class FortuneTeller {
 		///DETERMINE FORTUNE///
 		
 		//Age fortune
+		String fortune1 = "";
 		if (age % 2 == 0) {
 			//Age is even
 			if (age < 35) {
 				if (age == 34) {
-					System.out.println("You will be balding within the next year!");
+					fortune1 = "you will be balding within the next year!";
 				} else {
-					System.out.println("You will be balding within " + (35 - age) + " years!");
+					fortune1 = "you will be balding within " + (35 - age) + " years!";
 				}
 				
 			} else {
-				System.out.println("You will lose an eye in a fight with a great swan.");
+				fortune1 = "you will lose an eye in a fight with a great swan!";
 			}
 		} else //Age is odd
 		{
-			System.out.println("You will find gold in the basement of your first bought house.");
+			fortune1 = "you will find gold in the basement of your first bought house!";
 		}
 		
 		//Siblings fortune
+		String fortune2 = "";
 		if (siblings == 0) {
-			System.out.println("You will find a long lost identical twin on a company paid holiday in the Seychelles.");
+			fortune2 = "You will find a long lost identical twin on a company paid holiday in the Seychelles.";
 		} else if (siblings == 1) {
-			System.out.println("You will be elector mayor of a small farm town where their cash crop is seaweed.");
+			fortune2 = "You will be elector mayor of a small farm town where their cash crop is seaweed.";
 		} else if (siblings == 2) {
-			System.out.println("You will be the sole reason Iowa breaks into two states.");
+			fortune2 = "You will be the sole reason Iowa breaks into two states.";
 		} else if (siblings == 3) {
-			System.out.println("Your life story will be made into a movie starring James Franco and Ellen Page. \nIt flops at the box office but becomes a cult classic in Bahrain.");
+			fortune2 = "Your life story will be made into a movie starring James Franco and Ellen Page. \nIt flops at the box office but becomes a cult classic in Bahrain.";
 		} else if (siblings > 3) {
-			System.out.println("You will wake up one day and realise that you're " + (age/2) + " years old and that half of your life was just a dream.");
+			fortune2 = "You will wake up one day and realise that you're " + (age/2) + " years old and that half of your life was just a dream.";
 		} else if (siblings < 0) {
-			System.out.println("Bruh, you LITERALLY cannot have less than 0 siblings. That's just not a thing at all.");
+			fortune2 = "Bruh, you LITERALLY cannot have less than 0 siblings. That's just not a thing at all.";
 		}
 		
 		//Colour fortune
@@ -101,50 +101,52 @@ public class FortuneTeller {
 		}
 		
 		//Children
+		String fortune3 = "";
 		if (children == 0) {
-			System.out.println("You will have no children.");
+			fortune3 = "You will have no children.";
 		} else if (children == 1) {
-			System.out.println("You will have one child. That's enough, right?");
+			fortune3 = "You will have one child. That's enough, right?";
 		} else if (children == 2) {
-			System.out.println("You will have twins!");
+			fortune3 = "You will have twins!";
 		} else if (children > 2 && children < 9) {
-			System.out.println("You will have " + children + " children.");
+			fortune3 = "You will have " + children + " children.";
 		} else if (children == 9) {
-			System.out.println("You will have " + children + "children. Damn, dude.");
+			fortune3 = "You will have " + children + "children. Damn, dude.";
 		}
 		
 		//Dogs
+		String fortune4 = "";
 		if (dogs == 1) {
-			System.out.println("You will also have a dog.");
+			fortune4 = "You will also have a dog.";
 		} else if (dogs > 1) {
-			System.out.println("You also will have " + dogs + " dogs.");
+			fortune4 = "You also will have " + dogs + " dogs.";
 		}
 		
 		//Cats
+		String fortune5 = "";
 		if (cats == 1) {
-			System.out.println("You will also have a cat.");
+			fortune5 = "You will also have a cat.";
 		} else if (cats > 1 && cats < 15) {
-			System.out.println("You will also have " + cats + " cats");
+			fortune5 = "You will also have " + cats + " cats";
 		} else if (cats == 15) {
-			System.out.println("You will be, as the kids call it, a crazy cat lady. Fifteen cats, at least.");
+			fortune5 = "You will be, as the kids call it, a crazy cat lady. Fifteen cats, at least.";
 		}
 		
 		//Birth month
 		String dreamJob = "";
 		if (birthMonth >= 1 && birthMonth <= 3) {
-			dreamJob = " wristband model";
+			dreamJob = "a wristband model.";
 		} else if (birthMonth >= 4 && birthMonth <= 6) {
-			dreamJob = " CEO of a false eyelash company";
+			dreamJob = "the CEO of a false eyelash company.";
 		} else if (birthMonth <= 7 && birthMonth <= 9) {
-			dreamJob = "n olympic basket weaver";
+			dreamJob = "an olympic basket weaver.";
 		} else if (birthMonth >= 10 && birthMonth <= 12) {
-			dreamJob = " one of those people who spins the signs outside of car dealerships, but you make a lot of money from it";
+			dreamJob = "one of those people who spins the signs outside of car dealerships, but you make a lot of money from it.";
 		} else {
-			dreamJob = " zoo animal clean-up, because you didn't follow directions";
+			dreamJob = "zoo animal clean-up, because you didn't follow directions.";
 		}
 		
-		
-		
+		System.out.println(firstName + " " + lastName + ", " + fortune1 + "\n" + fortune2 + "\n" + fortune3 + " " + fortune4 + " " + fortune5 + "\nYou will also get your dream job, which is " + dreamJob);
 		
 		input.close();
 	}
