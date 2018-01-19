@@ -111,7 +111,7 @@ public class FortuneTeller {
 		} else if (children > 2 && children < 9) {
 			fortune3 = "You will have " + children + " children.";
 		} else if (children == 9) {
-			fortune3 = "You will have " + children + "children. Damn, dude.";
+			fortune3 = "You will have 9 children. Damn, dude.";
 		}
 		
 		//Dogs
